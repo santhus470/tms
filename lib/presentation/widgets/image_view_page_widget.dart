@@ -15,7 +15,6 @@ class _ImagePageViewState extends State<ImagePageView> {
   final List<String> imgList = [
     // Image.asset('assets/images/punarudharanam.jpg'),
     // Image.asset('assets/images/ulsavam2.jpg'),
-
     // Image.asset('assets/images/temple.jpg'),
     'assets/images/ulsavam2.jpg',
     'assets/images/punarudharanam.jpg',
@@ -56,7 +55,7 @@ class _ImagePageViewState extends State<ImagePageView> {
     return Stack(children: [
       InkWell(
         onTap: () {
-          //TODO implement image view
+          //TODO
         },
         child: PageView.builder(
           scrollDirection: Axis.horizontal,
