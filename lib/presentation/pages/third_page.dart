@@ -17,6 +17,7 @@ class _SecondPageState extends ConsumerState<ThirdPage> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.only(top: 20),
       padding: mainPagePaddding,
       child: Row(children: [
         const Expanded(

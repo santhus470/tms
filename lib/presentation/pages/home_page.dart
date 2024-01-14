@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/presentation/pages/fifth_page.dart';
 import 'package:tms/presentation/pages/first_pahe.dart';
 import 'package:tms/presentation/pages/fourth_page.dart';
 import 'package:tms/presentation/pages/second_page.dart';
@@ -37,6 +38,9 @@ class _HomePageState extends State<HomePage> {
             ),
             SliverToBoxAdapter(
               child: FourthPage(),
+            ),
+            SliverToBoxAdapter(
+              child: FifthPage(),
             )
           ],
         ),

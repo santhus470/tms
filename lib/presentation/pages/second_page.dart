@@ -75,7 +75,7 @@ class _ImageOverlayWidgetState extends State<ImageOverlayWidget>
 
     controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 500));
-    animation = Tween<double>(begin: 0, end: 1).animate(
+    animation = Tween<double>(begin: 0.5, end: 1).animate(
       CurvedAnimation(parent: controller!, curve: widget.curve!),
     );
   }
