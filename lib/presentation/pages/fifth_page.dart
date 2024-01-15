@@ -9,10 +9,11 @@ class FifthPage extends StatefulWidget {
 }
 
 class _FifthPageState extends State<FifthPage> {
+  static const double containerHeight = 500;
   List<String>? vazhipaduList;
   ScrollController? scrollController;
   bool showLeftArrow = false;
-  bool showRightArrow = false;
+  bool showRightArrow = true;
 
   @override
   void initState() {
@@ -30,20 +31,22 @@ class _FifthPageState extends State<FifthPage> {
   @override
   Widget build(BuildContext context) {
     vazhipaduList = List.generate(100, (i) => 'അര്‍ച്ചന $i');
-    return Stack(
-      children: [
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          child: Column(
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Column(
+        children: [
+          const Divider(indent: 50, endIndent: 50),
+          const Text(
+            'വഴിപാടുകള്‍',
+            style: bold50Orange,
+          ),
+          Stack(
             children: [
-              const Divider(indent: 50, endIndent: 50),
-              const Text(
-                'വഴിപാടുകള്‍',
-                style: bold50Orange,
-              ),
               SizedBox(
-                height: 500,
+                height: containerHeight,
                 child: GridView.builder(
+                  controller: scrollController,
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   scrollDirection: Axis.horizontal,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -74,25 +77,55 @@ class _FifthPageState extends State<FifthPage> {
                   itemCount: vazhipaduList!.length,
                 ),
               ),
+              showLeftArrow
+                  ? Positioned(
+                      bottom: containerHeight / 2,
+                      left: 10,
+                      child: InkWell(
+                          onTap: () {
+                            scrollController!.animateTo(
+                              scrollController!.position.pixels - 400,
+                              duration: const Duration(milliseconds: 1000),
+                              curve: Curves.easeInOut,
+                            );
+                          },
+                          onLongPress: () {
+                            scrollController!.animateTo(
+                              scrollController!.position.minScrollExtent,
+                              duration: const Duration(milliseconds: 1500),
+                              curve: Curves.easeInOut,
+                            );
+                          },
+                          child: const CircleAvatar(
+                              child: Icon(Icons.arrow_back_ios_new))))
+                  : const SizedBox(),
+              showRightArrow
+                  ? Positioned(
+                      // alignment: Alignment.bottomRight,
+                      bottom: containerHeight / 2,
+                      right: 10,
+                      child: InkWell(
+                          onTap: () {
+                            scrollController!.animateTo(
+                              scrollController!.position.pixels + 400,
+                              duration: const Duration(milliseconds: 1000),
+                              curve: Curves.easeInOut,
+                            );
+                          },
+                          onLongPress: () {
+                            scrollController!.animateTo(
+                              scrollController!.position.maxScrollExtent,
+                              duration: const Duration(milliseconds: 1500),
+                              curve: Curves.easeInOut,
+                            );
+                          },
+                          child: const CircleAvatar(
+                              child: Icon(Icons.arrow_forward_ios))))
+                  : const SizedBox()
             ],
           ),
-        ),
-        if (showLeftArrow)
-          Icon(
-            Icons.arrow_forward_ios,
-            size: 30,
-          ),
-        // Align(
-        //     alignment: Alignment.centerLeft,
-        //     child: AnimatedOpacity(
-        //       opacity: 1,
-        //       duration: const Duration(milliseconds: 500),
-        //       child: Icon(
-        //         Icons.arrow_forward_ios,
-        //         size: 30,
-        //       ),
-        //     ))
-      ],
+        ],
+      ),
     );
   }
 }
