@@ -33,7 +33,12 @@ const TextStyle bold20orange = TextStyle(
     fontFamily: 'Meera',
     color: yellow,
     fontWeight: FontWeight.w800);
-
+const TextStyle bold20 =
+    TextStyle(fontSize: 20, fontFamily: 'Meera', fontWeight: FontWeight.w800);
+const TextStyle normal20 = TextStyle(
+  fontSize: 20,
+  fontFamily: 'Meera',
+);
 const TextStyle bold50btnStyle = TextStyle(
     fontSize: 50,
     fontFamily: 'Meera',

@@ -16,6 +16,7 @@ class FirstPage extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           child: Stack(
             children: [
+             
               Image.asset(
                 // 'assets/images/temple.jpg',
                 'assets/gif/lamp.gif',

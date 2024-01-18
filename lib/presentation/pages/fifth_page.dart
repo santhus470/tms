@@ -64,11 +64,11 @@ class _FifthPageState extends State<FifthPage> {
                         children: [
                           Text(
                             vazhipaduList![index],
-                            // style: normal30,
+                            style: normal20,
                           ),
                           const Text(
                             'Rs.150/-',
-                            // style: bold30,
+                            style: bold20,
                           )
                         ],
                       ),
@@ -82,22 +82,24 @@ class _FifthPageState extends State<FifthPage> {
                       bottom: containerHeight / 2,
                       left: 10,
                       child: InkWell(
-                          onTap: () {
-                            scrollController!.animateTo(
-                              scrollController!.position.pixels - 400,
-                              duration: const Duration(milliseconds: 1000),
-                              curve: Curves.easeInOut,
-                            );
-                          },
-                          onLongPress: () {
-                            scrollController!.animateTo(
-                              scrollController!.position.minScrollExtent,
-                              duration: const Duration(milliseconds: 1500),
-                              curve: Curves.easeInOut,
-                            );
-                          },
-                          child: const CircleAvatar(
-                              child: Icon(Icons.arrow_back_ios_new))))
+                        onTap: () {
+                          scrollController!.animateTo(
+                            scrollController!.position.pixels - 400,
+                            duration: const Duration(milliseconds: 1000),
+                            curve: Curves.easeInOut,
+                          );
+                        },
+                        onLongPress: () {
+                          scrollController!.animateTo(
+                            scrollController!.position.minScrollExtent,
+                            duration: const Duration(milliseconds: 1500),
+                            curve: Curves.easeInOut,
+                          );
+                        },
+                        child: const CircleAvatar(
+                            child: Icon(Icons.arrow_back_ios_new)),
+                      ),
+                    )
                   : const SizedBox(),
               showRightArrow
                   ? Positioned(
