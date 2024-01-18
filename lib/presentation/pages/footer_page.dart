@@ -9,13 +9,14 @@ class FooterPage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(20),
-      height: size.height / 2,
+      // height: size.height / 2,
       color: Colors.green.shade900,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          
           SizedBox(
-            height: 20,
+            // height: 150,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -25,7 +26,10 @@ class FooterPage extends StatelessWidget {
                 const VerticalDivider(),
                 TextButton(
                     onPressed: () {}, child: const Text('Darsana Smayam')),
-                const VerticalDivider(),
+               Image.asset(
+                    'assets/images/peacock.png',
+                    height: 150,
+                  ),
                 TextButton(onPressed: () {}, child: const Text('Dieties')),
                 const VerticalDivider(),
                 TextButton(onPressed: () {}, child: const Text('Sambhavana')),
@@ -38,9 +42,11 @@ class FooterPage extends StatelessWidget {
             ),
           ),
           const Divider(),
+     
           const Text(
               'Ⓒ 2024 Sree Sugunandavilasam Arayajana Karayogam Vellanathirithu'),
-          IconButton.filled(
+              SizedBox(height:20),
+          IconButton(
               onPressed: () {},
               icon: Row(
                 mainAxisSize: MainAxisSize.min,
