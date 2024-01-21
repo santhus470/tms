@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch}),
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.orange.shade900, brightness: Brightness.dark),
+              seedColor: Colors.yellowAccent, brightness: Brightness.dark),
           brightness: Brightness.dark,
           useMaterial3: true,
         ),
