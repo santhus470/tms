@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:tms/firebase_options.dart';
 import 'package:tms/presentation/pages/fifth_page.dart';
 import 'package:tms/presentation/pages/first_pahe.dart';
 import 'package:tms/presentation/pages/footer_page.dart';
@@ -15,6 +17,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    initFirebase();
+  }
+
+  void initFirebase() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

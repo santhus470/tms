@@ -87,7 +87,7 @@ class FooterPage extends StatelessWidget {
               const SizedBox(height: 30),
               const Divider(),
               const Text(
-                'Ⓒ 2024 Sree Sugunandavilasam Arayajana Karayogam Vellanathirithu',
+                'Ⓒ 2024 Sree Sugunandavilasam Arayajana Karayogam Vellanathuruthu',
               ),
               const SizedBox(height: 10),
               IconButton.filled(

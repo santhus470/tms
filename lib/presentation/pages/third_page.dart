@@ -20,10 +20,11 @@ class _SecondPageState extends ConsumerState<ThirdPage> {
       margin: const EdgeInsets.only(top: 20),
       padding: mainPagePaddding,
       child: Row(children: [
-        const Expanded(
+        Expanded(
           flex: 4,
-          child: Text('Descreption'),
+          child: SizedBox(),
         ),
+        const SizedBox(width: 30),
         Expanded(
           flex: 6,
           child: Column(
