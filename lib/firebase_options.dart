@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -44,38 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDKwVsJrtmtRZ6t70Rih2iPDpHlFfhRMls',
-    appId: '1:276632272722:web:5d34a9aa0e87fe8402448b',
-    messagingSenderId: '276632272722',
-    projectId: 'tms-sskv',
-    authDomain: 'tms-sskv.firebaseapp.com',
-    storageBucket: 'tms-sskv.appspot.com',
-    measurementId: 'G-HJP1ZFEJ8M',
+    apiKey: 'AIzaSyCSCl6nZQluxfAC96PD1rBQvZ6X_vdU8Zg',
+    appId: '1:308056930472:web:8a748fd5956192bad16a9d',
+    messagingSenderId: '308056930472',
+    projectId: 'temple-mng-system',
+    authDomain: 'temple-mng-system.firebaseapp.com',
+    storageBucket: 'temple-mng-system.appspot.com',
+    measurementId: 'G-1RWPWJH009',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAWNnQ7944oS7XqGQhy1qeQFOPouqlp6Kc',
-    appId: '1:276632272722:android:dd9d414e6f6fce4702448b',
-    messagingSenderId: '276632272722',
-    projectId: 'tms-sskv',
-    storageBucket: 'tms-sskv.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDZFHhOTWnIlhKCp5_T7IYPDM0lcOXDPJ8',
-    appId: '1:276632272722:ios:2ec73264f16356f002448b',
-    messagingSenderId: '276632272722',
-    projectId: 'tms-sskv',
-    storageBucket: 'tms-sskv.appspot.com',
-    iosBundleId: 'com.example.tms',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDZFHhOTWnIlhKCp5_T7IYPDM0lcOXDPJ8',
-    appId: '1:276632272722:ios:c1caffc8dd3ecb1002448b',
-    messagingSenderId: '276632272722',
-    projectId: 'tms-sskv',
-    storageBucket: 'tms-sskv.appspot.com',
-    iosBundleId: 'com.example.tms.RunnerTests',
+    apiKey: 'AIzaSyABve3aaehuon8wDgpBAq7hnNVm1jpwjRI',
+    appId: '1:308056930472:android:fde332884c9bf61bd16a9d',
+    messagingSenderId: '308056930472',
+    projectId: 'temple-mng-system',
+    storageBucket: 'temple-mng-system.appspot.com',
   );
 }
